@@ -52,3 +52,17 @@ func queryData(db *sql.DB, sqlStr string) (activity, error) {
 	}
 	return ac, err
 }
+
+func queryData1(db *sql.DB, sqlStr string, id int64) (activity, error) {
+	var ac activity
+	err := db.QueryRow(sqlStr, id).Scan(&ac.Id, &ac.ActivityId, &ac.Name, &ac.ST, &ac.ET)
+	if err != nil {
+		switch err {
+		case sql.ErrNoRows:
+			err = errors.Wrap(err, "is sql.ErrNoRows")
+		default:
+			err = errors.Wrap(err, "scan error")
+		}
+	}
+	return ac, err
+}
