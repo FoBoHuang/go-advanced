@@ -39,6 +39,7 @@ func main() {
 	//goroutine2 监听服务器退出
 	g.Go(func() error {
 		select {
+		//接受通道关闭的消息
 		case <-errctx.Done():
 			fmt.Println("====errgroup exit====")
 		case <-serverOut:

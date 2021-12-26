@@ -1,0 +1,19 @@
+{
+  "http": {
+    "host": "192.168.2.204",
+    "port": "8080"
+  },
+  "grpc": {
+    "host": "192.168.2.204",
+    "port": "8090"
+  },
+  "customer": {
+    "addr": "localhost:8091"
+  },
+  "db": {
+    "host": "localhost",
+    "port": "3306",
+    "user": "root",
+    "password": "980414"
+  }
+}
