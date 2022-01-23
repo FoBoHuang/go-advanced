@@ -2,31 +2,31 @@
 
    - 测试10字节value大小，redis get，set性能
 
-     ![redis -d 10](./redis -d 10.png)
+     ![redis -d 10](./redis-d-10.png)
 
    - 测试20字节value大小，redis get，set性能
 
-     ![redis -d 20](./redis -d 20.png)
+     ![redis -d 20](./redis-d-20.png)
 
    - 测试50字节value大小，redis get，set性能
 
-     ![redis -d 50](./redis -d 50.png)
+     ![redis -d 50](./redis-d-50.png)
 
    - 测试100字节value大小，redis get，set性能
 
-     ![redis -d 100](./redis -d 100.png)
+     ![redis -d 100](./redis-d-100.png)
 
    - 测试200字节value大小，redis get，set性能
 
-     ![redis -d 200](./redis -d 200.png)
+     ![redis -d 200](./redis-d-200.png)
 
    - 测试1k字节value大小，redis get，set性能
 
-     ![redis -d 1k](./redis -d 1k.png)
+     ![redis -d 1k](./redis-d-1k.png)
 
    - 测试5k字节value大小，redis get，set性能
 
-     ![redis -d 5k](./redis -d 5k.png)
+     ![redis -d 5k](./redis-d-5k.png)
 
      结论：在value数据小于1k的情况下，数据的大小对于reids的效率影响不大。在value数据大于1k的情况下，redis的效率会随着vlaue数据的变大而效率会越低，针对GET和SET方法的话，SET方法受到的影响更大。
 
